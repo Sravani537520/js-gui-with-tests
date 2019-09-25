@@ -42,7 +42,7 @@ QUnit.test("TEST first number validation", assert => {
   const input = document.querySelector('#firstNumber')
   const warning = document.querySelector('#firstWarning')
   input.value = -3;
-  assert.equal(input.value, -3, "Bad value assigned")
+  assert.notequal(input.value, -3, "Bad value assigned")
   assert.strictEqual(input.checkValidity(), false, "Correctly fails validation")
   input.focus()
   input.blur()
